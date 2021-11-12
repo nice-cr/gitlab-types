@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "composite": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "declaration": true,
+    "esModuleInterop": true,
+    "declarationDir": "dist/types"
+  },
+  "include": ["src"]
+}

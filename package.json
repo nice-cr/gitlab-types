@@ -1,0 +1,23 @@
+{
+  "name": "gitlab-types",
+  "version": "1.0.0",
+  "description": "types for gitlab ce or ee api",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nice-cr/gitlab-types.git"
+  },
+  "author": "nice-cr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nice-cr/gitlab-types/issues"
+  },
+  "homepage": "https://github.com/nice-cr/gitlab-types#readme",
+  "dependencies": {
+    "@gitbeaker/core": "^31.0.0",
+    "typescript": "^4.3.5"
+  }
+}
