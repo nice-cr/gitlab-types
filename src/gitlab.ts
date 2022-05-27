@@ -65,6 +65,7 @@ export interface GL_mergeRequest {
 
   object_kind: GL_objectKind;
   object_attributes: GL_MergeRequestSchema;
+  labels?: string[];
 
   repository: Pick<GL_project, 'name' | 'homepage' | 'description' | 'url'>;
 }
