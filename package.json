@@ -1,6 +1,6 @@
 {
   "name": "@nice-cr/gitlab-types",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "types for gitlab ce or ee api",
   "main": "dist/gitlab.js",
   "files": [
