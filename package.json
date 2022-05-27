@@ -1,8 +1,11 @@
 {
   "name": "@nice-cr/gitlab-types",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "types for gitlab ce or ee api",
-  "main": "index.js",
+  "main": "dist/gitlab.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "bump": "npm publish --registry https://registry.npmjs.org --access=public"
@@ -20,5 +23,9 @@
   "dependencies": {
     "@gitbeaker/core": "^31.0.0",
     "typescript": "^4.3.5"
+  },
+  "types": "dist/types",
+  "devDependencies": {
+    "@types/node": "^17.0.35"
   }
 }
