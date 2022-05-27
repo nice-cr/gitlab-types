@@ -1,15 +1,15 @@
 // MR请求的属性说明见：https://docs.gitlab.com/ee/api/merge_requests.html
 
-import type { CommitSchema } from "@gitbeaker/core/dist/types/resources/Commits";
-import type { AllMergeRequestsOptions } from "@gitbeaker/core/dist/types/resources/MergeRequests";
-import type { MergeRequestSchema } from "@gitbeaker/core/dist/types/resources/MergeRequests";
-import type { ProjectSchema } from "@gitbeaker/core/dist/types/resources/Projects";
-import type { UserSchema } from "@gitbeaker/core/dist/types/resources/Users";
+import type { CommitSchema } from '@gitbeaker/core/dist/types/resources/Commits';
+import type { AllMergeRequestsOptions } from '@gitbeaker/core/dist/types/resources/MergeRequests';
+import type { MergeRequestSchema } from '@gitbeaker/core/dist/types/resources/MergeRequests';
+import type { ProjectSchema } from '@gitbeaker/core/dist/types/resources/Projects';
+import type { UserSchema } from '@gitbeaker/core/dist/types/resources/Users';
 
-export type { BranchSchema } from "@gitbeaker/core/dist/types/resources/Branches";
-export type { UserSchema } from "@gitbeaker/core/dist/types/resources/Users";
-export type { CommitSchema } from "@gitbeaker/core/dist/types/resources/Commits";
-export type { MergeRequestSchema } from "@gitbeaker/core/dist/types/resources/MergeRequests";
+export type { BranchSchema } from '@gitbeaker/core/dist/types/resources/Branches';
+export type { UserSchema } from '@gitbeaker/core/dist/types/resources/Users';
+export type { CommitSchema } from '@gitbeaker/core/dist/types/resources/Commits';
+export type { MergeRequestSchema } from '@gitbeaker/core/dist/types/resources/MergeRequests';
 
 export type GL_AllMergeRequestsOptions = AllMergeRequestsOptions;
 
@@ -20,28 +20,28 @@ export interface GL_project extends ProjectSchema {
 }
 
 export enum GL_objectKind {
-  note = "note", // comment on mr
-  mergeRequest = "merge_request",
+  note = 'note', // comment on mr
+  mergeRequest = 'merge_request',
 }
 
 // mr hook 推送过来的 object_attributes.action
 export enum MrHookActionType {
-  close = "close", // 关闭
-  update = "update", // 更新描述、label等各种 mr 相关的属性
-  open = "open", // 创建mr
-  merge = "merge", // 合并
+  close = 'close', // 关闭
+  update = 'update', // 更新描述、label等各种 mr 相关的属性
+  open = 'open', // 创建mr
+  merge = 'merge', // 合并
 }
 
 export enum GL_mergeState {
-  opened = "opened",
-  closed = "closed",
-  locked = "locked",
-  merged = "merged",
+  opened = 'opened',
+  closed = 'closed',
+  locked = 'locked',
+  merged = 'merged',
 }
 
 export enum GL_mergeStatus {
-  unchecked = "unchecked",
-  canBeMerge = "can_be_merged",
+  unchecked = 'unchecked',
+  canBeMerge = 'can_be_merged',
 }
 
 export interface GL_MergeRequestSchema extends MergeRequestSchema {
@@ -66,7 +66,7 @@ export interface GL_mergeRequest {
   object_kind: GL_objectKind;
   object_attributes: GL_MergeRequestSchema;
 
-  repository: Pick<GL_project, "name" | "homepage" | "description" | "url">;
+  repository: Pick<GL_project, 'name' | 'homepage' | 'description' | 'url'>;
 }
 
 // TODO: use gitbeaker Repository type
@@ -93,4 +93,22 @@ export interface PushEvent {
   repository: Repository;
   commits: CommitSchema[];
   total_commits_count: number;
+}
+
+export interface ProjectHookSchema {
+  id: number;
+  url: string;
+  project_id: number;
+  push_events: boolean;
+  push_events_branch_filter: string;
+  issues_events: boolean;
+  confidential_issues_events: boolean;
+  merge_requests_events: boolean;
+  tag_push_events: boolean;
+  note_events: boolean;
+  job_events: boolean;
+  pipeline_events: boolean;
+  wiki_page_events: boolean;
+  enable_ssl_verification: boolean;
+  created_at: string;
 }
