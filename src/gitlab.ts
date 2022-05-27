@@ -10,6 +10,7 @@ export type { BranchSchema } from '@gitbeaker/core/dist/types/resources/Branches
 export type { UserSchema } from '@gitbeaker/core/dist/types/resources/Users';
 export type { CommitSchema } from '@gitbeaker/core/dist/types/resources/Commits';
 export type { MergeRequestSchema } from '@gitbeaker/core/dist/types/resources/MergeRequests';
+export type { ProjectExtendedSchema } from '@gitbeaker/core/dist/types/resources/Projects';
 
 export type GL_AllMergeRequestsOptions = AllMergeRequestsOptions;
 
