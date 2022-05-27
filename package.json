@@ -4,14 +4,15 @@
   "description": "types for gitlab ce or ee api",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "bump": "npm publish --registry https://registry.npmjs.org --access=public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nice-cr/gitlab-types.git"
   },
   "author": "nice-cr",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nice-cr/gitlab-types/issues"
   },
