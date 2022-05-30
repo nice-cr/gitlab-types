@@ -1,8 +1,8 @@
 {
   "name": "@nice-cr/gitlab-types",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "types for gitlab ce or ee api",
-  "main": "dist/gitlab.js",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
@@ -24,7 +24,7 @@
     "@gitbeaker/core": "^34.6.0",
     "typescript": "^4.3.5"
   },
-  "types": "dist/types",
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "@types/node": "^17.0.35"
   }
