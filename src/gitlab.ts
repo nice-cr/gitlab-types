@@ -15,7 +15,6 @@ export type { ProjectExtendedSchema } from '@gitbeaker/core/dist/types/resources
 export type GL_AllMergeRequestsOptions = AllMergeRequestsOptions;
 
 export interface GL_project extends ProjectSchema {
-  namespace: string | null;
   homepage: string;
   url: string;
 }
